@@ -1,0 +1,42 @@
+a {
+  text-decoration: none;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.opciones {
+  height: 100%;
+  position: relative;
+  float: left;
+}
+
+.lista-Opciones {
+  margin: 100px 0 0 50px;
+}
+
+li {
+  list-style: none;
+  height: 30px;
+  width: 100%;
+  padding: 20px 0 10px 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+li:hover {
+  background: #bbd0ff;
+  color: #000000;
+  transform: scale(1.1);
+  border-left: #1157fb 8px solid;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  padding: 0 10px 0 0;
+  margin-top: -10px;
+}

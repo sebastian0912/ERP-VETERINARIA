@@ -1,0 +1,32 @@
+
+<div class="container">
+  <div class="formu">
+  </div>
+  <div class="preguntas">
+    <form [formGroup]="miFormulario" (ngSubmit)="onSubmit()">
+
+      <label > Dilegencie la siguiente informacion </label>
+
+      <div>
+        <input id="correo" type="email" formControlName="correo" placeholder="Correo" class="input">
+      </div>
+
+      <div>
+        <input id="nombre" type="text" formControlName="nombre" placeholder="Nombre" class="input">
+      </div>
+
+      <div>
+        <input id="cedula" type="text" formControlName="cedula" placeholder="Numero de documento" class="input">
+      </div>
+
+      <div>
+        <input id="contrasena" type="password" formControlName="contrasena" placeholder="Contraseña" class="input">
+      </div>
+
+
+      <button type="submit" [disabled]="!miFormulario.valid" class="boton">Enviar</button>
+    </form>
+  </div>
+
+
+</div>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "erp-veterinaria": {
+      "hosting": {
+        "ERP-VETERINARIA": [
+          "erp-veterinaria"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "erp-veterinaria"
+  }
+}

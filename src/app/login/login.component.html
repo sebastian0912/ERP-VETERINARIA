@@ -1,0 +1,35 @@
+
+
+<div class="container">
+  <div class="screen">
+    <div class="screen__content">
+      <form class="login" [formGroup]="formHojaDeVida">
+        <div class="login__field">
+          <i class="login__icon fas fa-user"></i>
+          <input type="text" class="login__input" formControlName="signInEmail" placeholder="Correo" id="signIn-email">
+        </div>
+        <div class="login__field">
+          <i class="login__icon fas fa-lock"></i>
+          <input type="password" class="login__input" formControlName="signInPassword" placeholder="Contraseña" id="signIn-password">
+        </div>
+        <i class="bx bx-show-alt" id="icon"></i>
+        <button class="button login__submit" (click)="login()" style="margin-bottom: 30px;">
+
+          <h4 class="button__text" >Iniciar Sesión</h4>
+
+        </button>
+
+        <a routerLink="/registrese" style="margin-left: 100px; ">
+          Registrese
+        </a>
+      </form>
+
+    </div>
+    <div class="screen__background">
+      <span class="screen__background__shape screen__background__shape4"></span>
+      <span class="screen__background__shape screen__background__shape3"></span>
+      <span class="screen__background__shape screen__background__shape2"></span>
+      <span class="screen__background__shape screen__background__shape1"></span>
+    </div>
+  </div>
+</div>
