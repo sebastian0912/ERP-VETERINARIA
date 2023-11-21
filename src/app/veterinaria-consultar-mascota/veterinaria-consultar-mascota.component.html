@@ -13,5 +13,55 @@
         <h1 id="perfil" class="titulo">{{ usuarioParseado?.perfil }}</h1>
       </div>
     </header>
+
+    <div class="registro">
+      <label class="tituloAUX">Dilegencie la siguiente
+        informacion: </label>
+
+      <div class="contenedor-imagen-preguntas">
+
+        <div class="preguntas">
+          <form [formGroup]="buscarMascota">
+            <!--input de la cedula de la persona -->
+            <input type="text" class="input" id="cedula" placeholder="Cedula" formControlName="cedula" required
+              autocomplete="off">
+
+            <button type="button" class="boton" style="margin-top: 20px;" (click)="buscarM()">Buscar</button>
+          </form>
+
+          <div *ngIf="mascotaData && mascotaData.length > 0" class="card">
+            <div class="card-image-container">
+              <img [src]="mascotaData[0].foto" alt="Foto de la mascota" class="card-img">
+            </div>
+            <div class="card-info-container">
+              <div class="card-body">
+                <h5 class="card-title">{{ mascotaData[0].nombre }}</h5>
+                <p class="card-text">Raza: {{ mascotaData[0].raza }}</p>
+                <p class="card-text">Edad: {{ mascotaData[0].edad }}</p>
+                <p class="card-text">Peso: {{ mascotaData[0].peso }}</p>
+                <p class="card-text">Sexo: {{ mascotaData[0].sexo }}</p>
+                <p class="card-text">Color: {{ mascotaData[0].color }}</p>
+                <p class="card-text">Especie: {{ mascotaData[0].especie }}</p>
+                <p class="card-text">Observaciones: {{ mascotaData[0].observaciones }}</p>
+                <p class="card-text">Desparasitación: {{ mascotaData[0].desparasitacion }}</p>
+                <p class="card-text">Esterilizado: {{ mascotaData[0].esterilizado ? 'Sí' : 'No' }}</p>
+                <p class="card-text">Fecha de Esterilización: {{ mascotaData[0].fechaEsterilizacion }}</p>
+                <p class="card-text">Fecha de Nacimiento: {{ mascotaData[0].fechaNacimiento }}</p>
+                <p class="card-text">Fecha de Vacuna: {{ mascotaData[0].fechaVacuna }}</p>
+                <p class="card-text">Tipo de Vacuna: {{ mascotaData[0].tipoVacuna }}</p>
+                <!-- Agrega más campos según sea necesario -->
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+
   </div>
 </div>

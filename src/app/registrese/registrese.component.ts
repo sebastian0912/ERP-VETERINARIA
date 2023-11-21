@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './registrese.component.html',
   styleUrls: ['./registrese.component.css']
 })
+
 export class RegistreseComponent implements OnInit {
   miFormulario: FormGroup;
 

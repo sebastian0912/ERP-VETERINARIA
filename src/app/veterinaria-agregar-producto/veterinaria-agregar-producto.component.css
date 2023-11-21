@@ -15,8 +15,9 @@
 
 .contenido {
   float: right;
-  width: 82%;
+  width: 70%;
   padding: 20px;
+  margin-left: 50px;
 }
 
 header {
@@ -45,7 +46,8 @@ header {
   padding-top: 20px;
   font-size: 25pt;
   font-weight: 600;
-  color: #000
+  color: #000;
+  margin-left: -350px;
   /*font-style: italic;*/
 }
 
@@ -58,4 +60,81 @@ span {
   font-weight: 500;
   margin-top: -15px;
   font-style: italic;
+}
+
+
+.registro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
+  width: 45%;
+  height: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 12px 8px rgba(0, 0, 0, 0.15);
+  padding: 50px;
+}
+
+.preguntas {
+  width: 100%;
+  text-align: center; /* Center the inline children horizontally */
+}
+
+.tituloAUX {
+  width: 100%; /* Ocupa toda la anchura */
+  font-weight: 800;
+  font-size: 16pt;
+  margin-bottom: 20px;
+}
+
+
+.input {
+  font-family: 'Poppins', sans-serif;
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+  border-width: 0px;
+  border-color: #cccccc;
+  background-color: #ffffff;
+  border-style: solid;
+  border-radius: 11px;
+  box-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+  margin: 20px 20px 0 0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.boton {
+  height: 50px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #fff;
+  background-color: #0066cc;
+  padding: 10px 30px;
+  border: 2px solid #0066cc;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  margin: 20px 0px 0 0px;
+}
+
+
+.boton:disabled {
+  display: none;
+}
+
+
+input[type="file"] {
+  opacity: 0;
+  position: absolute;
+  width: 250px;
+  margin: 20px 0 0 -275px;
+  background-color: #0066cc;
+  cursor: pointer;
 }

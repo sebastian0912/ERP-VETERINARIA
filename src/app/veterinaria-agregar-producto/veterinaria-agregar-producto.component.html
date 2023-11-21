@@ -13,5 +13,46 @@
         <h1 id="perfil" class="titulo">{{ usuarioParseado?.perfil }}</h1>
       </div>
     </header>
+
+    <div class="registro">
+      <label class="tituloAUX">Dilegencie la siguiente informacion: </label>
+      <div class="preguntas">
+        <form [formGroup]="servicioForm" (ngSubmit)="onSubmit()">
+          <!-- Assuming 'servicio' is the form control name -->
+          <select formControlName="servicio" id="servicio" class="input" style="width: 260px;">
+            <option value="">Selccione el servicio a ofrecer</option>
+            <option value="baño">Baño</option>
+            <option value="peluqueria">Peluquería</option>
+            <option value="guarderia">Guardería</option>
+          </select>
+
+          <input type="text" formControlName="nombrePropietario" id="nombrePropietario" class="input"
+            placeholder="Nombre del Propietario:">
+
+          <input type="email" formControlName="email" id="email" class="input" placeholder="Correo Electrónico:">
+
+          <input type="tel" formControlName="telefono" id="telefono" class="input" placeholder="Número de Teléfono:">
+
+          <input formControlName="infoAdicional" id="infoAdicional" class="input" placeholder="Información Adicional">
+
+          <input type="text" formControlName="tipoMascota" id="tipoMascota" class="input" placeholder="Tipo de Mascota">
+          <br>
+
+          <!--precio-->
+          <input type="text" formControlName="precio" id="precio" class="input" placeholder="Precio:" (input)="formatearPrecioEnTiempoReal($event)">
+
+          <!--foto-->
+          <button type="button" class="boton" (click)="fileInput.click()" style="width: 250px; margin-right: 20px;">Subir Foto</button>
+          <input type="file" #fileInput (change)="enArchivoSeleccionado($event)" hidden>
+
+
+          <button type="submit" class="boton" style="width: 100%">Subir</button>
+
+        </form>
+      </div>
+
+
+    </div>
+
   </div>
 </div>

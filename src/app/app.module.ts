@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 // importar formularios reactivos
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -53,6 +53,7 @@ import { DuenoPagarComponent } from './dueno-pagar/dueno-pagar.component';
     AppRoutingModule,
     // importar formularios reactivos
     ReactiveFormsModule,
+    FormsModule,
 
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyADO-ig7WnLyV4oCanAYPk-vFsArLxMeMg",

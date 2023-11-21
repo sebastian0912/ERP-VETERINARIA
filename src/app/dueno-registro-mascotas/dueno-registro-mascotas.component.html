@@ -1,1 +1,88 @@
-<p>dueno-registro-mascotas works!</p>
+<div class="container">
+  <div class="menu">
+    <app-menudueno> </app-menudueno>
+  </div>
+
+  <div class="contenido">
+    <header>
+      <div class="cajontitulo">
+        <h1 class="titulo">Bienvenido</h1>
+      </div>
+      <div class="perfil">
+        <h1 clas class="titulo">Hola, <span id="username"> {{ usuarioParseado?.nombre }}</span></h1>
+        <h1 id="perfil" class="titulo">{{ usuarioParseado?.perfil }}</h1>
+      </div>
+    </header>
+
+    <div class="registro">
+      <label class="tituloAUX">Dilegencie la siguiente
+        informacion: </label>
+
+      <div class="contenedor-imagen-preguntas">
+        <div class="imagen">
+          <img *ngIf="imagenPrevisualizacion" [src]="imagenPrevisualizacion" style="max-width: 100%; height: auto;" />
+        </div>
+
+        <div class="preguntas">
+          <form [formGroup]="registroMascota" (ngSubmit)="registrarMascota()">
+
+            <input type="text" class="input" id="nombre" placeholder="Nombre" formControlName="nombre" required>
+            <input type="text" class="input" id="raza" placeholder="Raza" formControlName="raza" required>
+            <input type="number" class="input" id="edad" placeholder="Edad" formControlName="edad" required>
+            <input type="number" class="input" id="peso" placeholder="Peso" formControlName="peso" required>
+
+            <select class="input" id="sexo" formControlName="sexo" required style="width: 310px;">
+              <option value="">Seleccione una opción</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Femenino">Femenino</option>
+            </select>
+
+            <input type="text" class="input" id="color" placeholder="Color" formControlName="color" required>
+            <input type="text" class="input" id="especie" placeholder="Especie" formControlName="especie" required>
+            <input type="text" class="input" id="observaciones" placeholder="Observaciones"
+              formControlName="observaciones" required>
+
+            <!-- subir foto -->
+            <button type="button" class="boton" style="margin-top: 20px;">Seleccionar foto</button>
+            <input type="file" class="input" id="foto" (change)="enArchivoSeleccionado($event)" required>
+
+            <!-- Fecha de Nacimiento -->
+            <input type="date" class="input" id="fechaNacimiento" placeholder="Fecha de Nacimiento"
+              formControlName="fechaNacimiento" required>
+
+            <!-- Historial de Vacunación -->
+            <div class="vacuna">
+              <input type="text" class="input" id="tipoVacuna" placeholder="Tipo de Vacuna"
+                formControlName="tipoVacuna">
+              <input type="date" class="input" id="fechaVacuna" placeholder="Fecha de Vacuna"
+                formControlName="fechaVacuna">
+            </div>
+
+            <!-- Desparasitación -->
+            <input type="text" class="input" id="desparasitacion" placeholder="Desparasitación"
+              formControlName="desparasitacion">
+
+            <!-- Esterilización/Castración -->
+            <div class="esterilizacion">
+              <label for="esterilizado" >¿Esterilizado/Castrado?</label>
+              <input type="checkbox" class="" id="esterilizado" formControlName="esterilizado" style="margin-right: 130px;">
+              <input type="date" class="input" id="fechaEsterilizacion" placeholder="Fecha de Esterilización/Castración"
+                formControlName="fechaEsterilizacion">
+            </div>
+
+            <br>
+            <button type="submit" class="boton" [disabled]="!registroMascota.valid"
+              style="margin-top: 20px;">Registrar</button>
+
+
+          </form>
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+</div>
